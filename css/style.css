@@ -5,12 +5,12 @@
 
 
 
-img{
+.img{
     width: 100vw;
-    height: 110%;
+    height: 178%;
     position: fixed;
     opacity: .9;
-    top: -0px;
+    top: -200px;
     left: 0;
     z-index: -1;
 }
@@ -29,17 +29,15 @@ img{
 
 .diming{
     margin-left: 5vw;
-    margin-top: 16vw;
     font-size: 6vw;
     font-weight: 500;
 }
 
 .wendu{
     position: relative;
-    margin-top: 6vw;
+    margin-top: 14vw;
     text-align: center;
     font-size: 20vw;
-    /*font-weight: 550;*/
 }
 .wendu>span{
     top: 3vw;
@@ -57,23 +55,24 @@ img{
     font-size: 3.5vw;}
 
 .jiangshui{
-    margin-top: 26px;
-    margin-right: 6px;
+    margin-top: 16px;
+    margin-right: 10px;
     float: right;
+    font-size: 3.6vw;
 }
 
 .qixiang{
-    margin-top: 16vw;
+    margin-top: 5vw;
     font-size: 3.6vw;
-    padding:0 3vw;
+    padding: 0 4vw;
 }
 
 .tigan,.shidu,.fengxiang,.nengjiandu,.fengli{
     width: 50vw;
-    margin-top: 3vw;
+    margin-top: 4vw;
     float: left;
     text-align: center;
-    font-size: 4vw;
+    font-size: 3.8vw;
     color: #d4d4d4;
 }
 
@@ -81,7 +80,7 @@ img{
 .nengjiandu>div,.fengli>div{
     text-align: center;
     font-weight: 500;
-    font-size: 5vw;
+    font-size: 4.5vw;
     color: #fff;
 }
 
@@ -96,7 +95,7 @@ img{
 
 .sanri{
     font-size: 3.6vw;
-    padding: 3vw;
+    padding: 2vw 4vw;
     color: #fff;
 }
 
@@ -104,7 +103,7 @@ img{
     height: 20px;
     width: 100vw;
     font-size: 4.5vw;
-    color: rgba(255, 255, 255, 0.8);
+    color: #e0dfdf;
     padding-bottom: 4vw;
 }
 
@@ -115,8 +114,8 @@ img{
 
 .richuriluo{
     position: absolute;
-    top:20vw;
-    right: 2vw;
+    top: 20vw;
+    left: 5vw;
     font-size: 3.5vw;
     color: #fae2e2;
 }
@@ -138,6 +137,7 @@ left: 5vw;
 
 
 .chaxun{
+    z-index: 1;
     font-size: 10vw;
     font-weight: bold;
     color:#fff;
@@ -157,10 +157,10 @@ left: 5vw;
     background-color: #ffffff;
     opacity: .9;
     border-radius: 6vw;
-    margin-top: 10vw;
+    margin-top: 13vw;
     z-index: 1;
     width: 45vw;
-    margin-left: 28vw;
+    margin-left: 30vw;
     height: 7vw;
     position: absolute;
     border: 1px solid #fff;
@@ -168,7 +168,7 @@ left: 5vw;
 
 .location{
     outline: none;
-    font-size: 3vw;
+    font-size: 3.5vw;
     margin-top: 1vw;
     width: 38vw;
     height: 5vw;
@@ -180,8 +180,9 @@ left: 5vw;
 
 .sub{
     position: absolute;
+
     left: 38vw;
-    margin-top: 0.5vw;
+    top: 0.2vw;
     width: 6vw;
     height: 6vw;
 }
