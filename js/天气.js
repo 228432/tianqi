@@ -15,6 +15,7 @@ window.onload=function(){
     var id='101091101';
     //将ajax请求再次封装
     function tianqi(){
+
         $.ajax({
             url:'https://devapi.qweather.com/v7/weather/now',
             type:'get',
@@ -31,6 +32,9 @@ window.onload=function(){
                 if (data.now.precip!=0.0){
                     jiangshusi=data.now.precip;
                 }
+                if (day==0){
+                    day='日'
+                }
 
                 var str='';
                 str='<div class="diming">'+diqu+'</div>' +
@@ -38,13 +42,14 @@ window.onload=function(){
                     '<div class="tianqi">'+"天气:"+data.now.text+'<span class=qi-'+data.now.icon+' style="font-size:18px">'+'</span>'+'</div>'+
                     '<div class="day">'+m+'月'+d+'日 '+'星期'+day+'</div>' +
                     '<div class="jiangshui qi-2006">'+jiangshusi+'</div>' +
-
+                    '<div class="qixiang">'+'气象信息'+'</div>' +
                     '<div class="left">'+
                     '<div class="tigan">'+'体感温度'+'<div>'+data.now.feelsLike+'&#8451'+'</div>'+'</div>' +
                     '<div class="shidu">'+'湿度'+'<div>'+data.now.humidity+'%'+'</div>'+'</div>' +
                     '<div class="fengxiang">'+'风向'+'<div>'+data.now.windDir+'</div>'+'</div>' +
                     '<div class="nengjiandu">'+'能见度'+'<div>'+data.now.vis+'公里'+'</div>'+'</div>'+
-                    '<div class="fengli">'+'风力等级'+'<div>'+data.now.windScale+'</div>'+'</div>' +
+                    '<div class="fengli">'+'风力等级'+'<div>'+data.now.windScale+'级'+'</div>'+'</div>' +
+                    '<div class="fengli">'+'气压'+'<div>'+data.now.pressure+'</div>'+'</div>' +
                     '</div>'
                 div.innerHTML=str;
             },
@@ -59,7 +64,8 @@ window.onload=function(){
                         var data=data.daily;
                         var str='';
                         var str0='<div class="richuriluo">'+ '<span class="qi-100">'+data[0].sunrise+'</span>' +
-                            '<span class="qi-150">'+data[0].sunset+'</span>'+'</div>'
+                            '<span class="qi-150">'+data[0].sunset+'</span>'+'</div>'+
+                        '<div class="sanri">'+'未来3日天气预报'+'</div>';
 
                         for(var k=0;k<data.length;k++){
                             switch(k){
@@ -88,6 +94,10 @@ window.onload=function(){
     }
     tianqi()
 
+    setInterval(function (){
+        tianqi()
+    },300000)
+
 
 
 
@@ -98,6 +108,12 @@ window.onload=function(){
 
     //设置点击时间发送ajax 重新请求数据。
     sub.addEventListener('click',function (){
+
+        if (location.value==''|| adm.value==''){
+            inp.style.display='none';
+            return false
+        }
+
         $.ajax({
             url:'https://geoapi.qweather.com/v2/city/lookup',
             type:'get',
