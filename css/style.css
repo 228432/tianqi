@@ -7,7 +7,7 @@
 
 img{
     width: 100vw;
-    height: 120%;
+    height: 110%;
     position: fixed;
     opacity: .9;
     top: -0px;
@@ -29,16 +29,16 @@ img{
 
 .diming{
     margin-left: 5vw;
-    margin-top: 6vw;
-    font-size: 11vw;
+    margin-top: 16vw;
+    font-size: 8vw;
     font-weight: 500;
 }
 
 .wendu{
     position: relative;
-    margin-top: 4vw;
+    margin-top: 10vw;
     text-align: center;
-    font-size: 46px;
+    font-size: 10vw;
     font-weight: 550;
 }
 .wendu>span{
@@ -70,7 +70,7 @@ img{
     width: 20vw;
     float: left;
     text-align: center;
-    font-size: 14px;
+    font-size: 4.6vw;
 }
 
 .tigan>div,.shidu>div,.fengxiang>div,
@@ -92,7 +92,8 @@ img{
 .san{
     height: 20px;
     width: 100vw;
-    margin-top: 10px;
+    margin-top: 3vw;
+    font-size: 4.5vw;
 }
 
 .san>div{
@@ -104,7 +105,7 @@ img{
     position: absolute;
     top:20vw;
     right: 2vw;
-    font-size: 5vw;
+    font-size: 4.5vw;
     color: white;
 }
 
@@ -140,6 +141,7 @@ left: 5vw;
 }
 
 .inp{
+    margin-top: 40vw;
     display: none;
     z-index: 1;
     text-align: center;
