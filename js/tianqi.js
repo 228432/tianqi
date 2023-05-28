@@ -10,6 +10,7 @@ window.onload=function(){
     // var adm=document.querySelector('.adm');
     var sub=document.querySelector('.sub');
     //设置默认城市id
+    var key='c3bfaa5f0cfe42119819c82344c89e11'
     var jiangshui='近两个小时无降水'
     var diqu='秦皇岛';
     var id='101091101';
@@ -19,11 +20,11 @@ window.onload=function(){
         $.ajax({
             url:'https://devapi.qweather.com/v7/weather/now',
             type:'get',
-            data:'location='+id+'&key=3d2838de02e54e7ebf82201a6d6ad209',
+            data:'location='+id+'&key='+key,
             contentType:'urlencoded',
             dataType:'json',
             success:function(data){
-                // console.log(data);
+                console.log(data);
                 var date1=new Date();
                 var day=date1.getDay();
                 var m=date1.getMonth();
@@ -57,10 +58,11 @@ window.onload=function(){
                 $.ajax({
                     url:'https://devapi.qweather.com/v7/weather/3d',
                     type:'get',
-                    data:'location='+id+'&key=3d2838de02e54e7ebf82201a6d6ad209',
+                    data:'location='+id+'&key='+key,
                     contentType:'urlencoded',
                     dataType:'json',
                     success:function(data){
+                        console.log(data)
                         var data=data.daily;
                         var str='';
                         var str0='<div class="richuriluo">'+ '<span class="qi-100">'+'日出'+data[0].sunrise+'</span>'+'<br>' +
